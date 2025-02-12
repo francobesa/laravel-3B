@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class InventoryController extends Controller
 {
     public function index () {
-        echo("hello");
+        return view("inventory.index");
     }
 }
