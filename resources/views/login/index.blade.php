@@ -1,90 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory Form</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      html,
-      body {
+  <style>
+    html, body {
         height: 100%;
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f8f9fa;
-      }
-      .container-box {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        width: 350px;
-        font-family: "Poppins", sans-serif;
-      }
-      .btn-back {
-        background-color: #93bae4;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 5px;
-      }
-      .btn-submit {
-        background-color: #93bae4;
-        color: white;
-        border: none;
-        padding: 10px;
-        width: 100%;
-        border-radius: 5px;
-      }
-    </style>
+    }
+    .container {
+      max-width: 300px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      font-family: "Poppins", "sans-serif";
+    }
+
+    .question {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container-box">
-      <!-- Back Button -->
-      <button class="btn-back mb-3">Back</button>
-
-      <!-- Category Dropdown -->
-      <div class="mb-3">
-        <label class="form-label">Categories:</label>
-        <select class="form-select">
-          <option>Select Category</option>
-          <option>Books</option>
-          <option>Electronics</option>
-          <option>Clothing</option>
-        </select>
+    <div class="container text-center">
+      <div class="m-3 row">
+        <label
+          for="staticEmail"
+          class="col-md-2 col-lg-2 col-xl-3 col-form-label"
+          >Email</label
+        >
+        <div class="col-md-10 col-lg-10 col-xl-9 col">
+          <input
+            input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
       </div>
-
-      <!-- Item Name -->
-      <div class="mb-3">
-        <label class="form-label">Item Name:</label>
-        <input type="text" class="form-control" placeholder="Enter item name" />
+      <div class="m-3 row">
+        <label
+          for="inputPassword"
+          class="col-md-3 col-lg-3 col-xl-4 ol-form-label"
+          >Password</label
+        >
+        <div class="col-md-9 col-lg-9 col-xl-8 col">
+          <input type="password" class="form-control" id="inputPassword" />
+        </div>
       </div>
-
-      <!-- Price -->
-      <div class="mb-3">
-        <label class="form-label">Price:</label>
-        <input type="number" class="form-control" placeholder="Enter price" />
+      <div class="m-3 row">
+        <class="col-12">
+        <button type="submit" class="btn btn-success btn-block" onclick="location.href='inventory'">Submit</button>
       </div>
-
-      <!-- Quantity -->
-      <div class="mb-3">
-        <label class="form-label">Qty:</label>
-        <input
-          type="number"
-          class="form-control"
-          placeholder="Enter quantity"
-        />
-      </div>
-
-      <!-- Submit Button -->
-      <button class="btn-submit">Submit</button>
     </div>
 
     <!-- Bootstrap JS -->

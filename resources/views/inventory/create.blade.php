@@ -18,7 +18,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f8f9fa;
+        background-image: url(https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_960_720.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .container-box {
         background-color: #fff;
@@ -29,14 +32,14 @@
         font-family: "Poppins", sans-serif;
       }
       .btn-back {
-        background-color: #93bae4;
+        background-color: #3a2d1c;
         color: white;
         border: none;
         padding: 8px 16px;
         border-radius: 5px;
       }
       .btn-submit {
-        background-color: #93bae4;
+        background-color: #3a2d1c;
         color: white;
         border: none;
         padding: 10px;
@@ -55,9 +58,9 @@
         <label class="form-label">Categories:</label>
         <select class="form-select">
           <option>Select Category</option>
-          <option>Books</option>
-          <option>Electronics</option>
-          <option>Clothing</option>
+          <option>Textbooks</option>
+          <option>Novels</option>
+          <option>Magazines</option>
         </select>
       </div>
 
@@ -70,7 +73,7 @@
       <!-- Price -->
       <div class="mb-3">
         <label class="form-label">Price:</label>
-        <input type="number" class="form-control" placeholder="Enter price" />
+        <input type="text" class="form-control" placeholder="Enter price" />
       </div>
 
       <!-- Quantity -->
