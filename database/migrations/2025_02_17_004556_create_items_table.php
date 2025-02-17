@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger(column: 'category_id')->index();
-            $table->string(column: 'item_name');
-            $table->decimal(column: 'price',total: 10, places: 2);
-            $table->integer(column: 'qty');
+            $table->unsignedBigInteger('category_id')->index();
+            $table->string('item_name');
+            $table->decimal('price',10,2);
+            $table->integer('qty');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('items')->onDelete('CASCADE')->onUpdate('CASCADE');
