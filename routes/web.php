@@ -8,4 +8,7 @@ Route::get('/', function () {
 
 Route:: get('/inventory', 'App\Http\Controllers\InventoryController@index');
 
+Route:: get('/inventory/create', 'App\Http\Controllers\InventoryController@create');
+
 Route:: get('/login', 'App\Http\Controllers\LoginController@index');
+
