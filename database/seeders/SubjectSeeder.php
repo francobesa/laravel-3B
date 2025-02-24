@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Facades\DB;
 
 class SubjectSeeder extends Seeder
 {
@@ -16,7 +15,7 @@ class SubjectSeeder extends Seeder
         $courses = DB::table("course")->get();
         
         foreach ($courses as $course) {
-            DB::table("course")->insert([
+            \DB::table("course")->insert([
             'course_id' => $course->id,
             'name' => 'FILI',
             'description' => 'FIlipino',
