@@ -11,18 +11,25 @@
 </div>
 
 <!-- Large Screen Table Format -->
-<div class="d-none d-md-block">
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Title</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Author</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Genre</div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Six of Crows</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Leigh Bardugo</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Fantasy</div>
-    </div>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($categories as $category)
+        
+        <tr>
+            <td>{{$category->category_name}}</td>
+            <td>Leigh Bardugo</td>
+            <td>Fantasy</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 
 <!-- Small Screen Table Format (Separate Tables) -->
 <div class="d-block d-md-none">
