@@ -3,41 +3,45 @@
 
 @section('content')
 
+<style>
+    .rounded-header {
+        border-radius: 10px;
+        background-color: #351F0C;
+        padding: 10px;
+        color: #F5F4F3;
+    }
+</style>
+
 <!-- Header Row -->
 <div class="row d-flex justify-content-center">
-    <div class="col-md-9 col-lg-12 col-xl-12 text-center grid-item fw-bold fs-3">
+    <div class="col-md-9 col-lg-12 col-xl-12 text-center grid-item fw-bold fs-3 rounded-header">
         Inventory
     </div>
 </div>
 
-<!-- Large Screen Table Format -->
-<div class="d-none d-md-block">
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Title</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Author</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Genre</div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Six of Crows</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Leigh Bardugo</div>
-        <div class="col-md-3 col-lg-4 col-xl-4 grid-item">Fantasy</div>
-    </div>
-</div>
 
-<!-- Small Screen Table Format (Separate Tables) -->
-<div class="d-block d-md-none">
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Title</div>
-        <div class="col-12 text-center grid-item">Six of Crows</div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Author</div>
-        <div class="col-12 text-center grid-item">Leigh Bardugo</div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Genre</div>
-        <div class="col-12 text-center grid-item">Fantasy</div>
-    </div>
-</div>
+
+<!-- Table for inventory items -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($items as $item)
+        
+        <tr>
+            <td>{{$item->item_name}}</td>
+            <td>{{$item->category->category_name}}</td> 
+            <td>${{ number_format($item->price, 2) }}</td>
+            <td>{{$item->qty}}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 
 @endsection

@@ -3,48 +3,38 @@
 
 @section('content')
 
+<!-- rounded rectangle style -->
+<style>
+    .rounded-header {
+        border-radius: 10px;
+        background-color: #351F0C;
+        padding: 10px;
+        color: #F5F4F3;
+    }
+</style>
+
 <!-- Header Row -->
 <div class="row d-flex justify-content-center">
-    <div class="col-md-9 col-lg-12 col-xl-12 text-center grid-item fw-bold fs-3">
-        Inventory
+    <div class="col-md-9 col-lg-12 col-xl-12 text-center grid-item fw-bold fs-3 rounded-header">
+        Category
     </div>
 </div>
 
-<!-- Large Screen Table Format -->
+<!-- Table for category -->
 <table class="table">
     <thead>
         <tr>
             <th>Title</th>
-            <th>Author</th>
-            <th>Genre</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($categories as $category)
-        
         <tr>
             <td>{{$category->category_name}}</td>
-            <td>Leigh Bardugo</td>
-            <td>Fantasy</td>
         </tr>
         @endforeach
     </tbody>
 </table>
 
-<!-- Small Screen Table Format (Separate Tables) -->
-<div class="d-block d-md-none">
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Title</div>
-        <div class="col-12 text-center grid-item">Six of Crows</div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Author</div>
-        <div class="col-12 text-center grid-item">Leigh Bardugo</div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center grid-item fw-bold">Genre</div>
-        <div class="col-12 text-center grid-item">Fantasy</div>
-    </div>
-</div>
 
 @endsection

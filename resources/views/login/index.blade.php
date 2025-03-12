@@ -8,6 +8,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url('https://wallpaperaccess.com/full/2413220.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; 
+        background-repeat: no-repeat; 
     }
     .container {
       max-width: 300px;

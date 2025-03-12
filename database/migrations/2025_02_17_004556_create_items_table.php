@@ -16,11 +16,11 @@ return new class extends Migration
             
             $table->unsignedBigInteger('category_id')->index(); // Foreign key to categories
             $table->string('item_name');
-            $table->decimal('price', 10, 2);
+            $table->decimal('price', 8, 2);
             $table->integer('qty');
             $table->timestamps();
 
-            // Correct foreign key referencing categories table
+            // foreign key referencing categories table
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
